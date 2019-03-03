@@ -1,0 +1,58 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/icons/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ],
+        "urls": [
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+          "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js",
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        ]
+      }
+    }
+  ], "dataGroups":[
+    {
+      "name":"cache-first",
+      "urls":[
+        "http://127.0.0.1:8080/app/busqueda-agencias-presenter/busqueda-agencias-presenter.component.html"
+      ],
+      "cacheConfig":{
+        "strategy":"performance",
+        "maxSize":10,
+        "maxAge":"1d"
+      }
+    },
+    {
+      "name":"api-first",
+      "urls":[
+        "http://127.0.0.1:8080/app/resultado-busqueda-agencias-presenter/.component.html"
+      ],
+      "cacheConfig":{
+        "strategy":"freshness",
+        "maxSize":100,
+        "maxAge":"1h",
+        "timeout":"5s"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<p>
+  <app-busqueda-agencias-presenter
+    (busquedaA)="onBusquedaAgencias($event)"
+    (busquedaM)="onBusquedaMisiones($event)"
+    (busquedaE)="onBusquedaEstados($event)"
+  ></app-busqueda-agencias-presenter>
+  <input type="button" value ="Guardar" (click)="onSave()">
+  <app-resultado-busqueda-agencias-presenter
+    [resultado] = "resultado"
+  ></app-resultado-busqueda-agencias-presenter>
+</p>
